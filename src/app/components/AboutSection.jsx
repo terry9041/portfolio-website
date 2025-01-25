@@ -26,25 +26,14 @@ const TAB_DATA = [
         <li>
           Simon Fraser University
           <ul className="list-disc pl-5">
-            <li>Bachelor of Science in Computing Science Science</li>
+            <li>Bachelor of Science in Computing Science</li>
             <li>GPA: 3.89/4.33</li>
             <li>Awards: SFU Alumni Scholarship (Summer 2024)</li>
           </ul>
         </li>
       </ul>
     ),
-  },
-  {
-    title: "Experience",
-    id: "experience",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Software Developer @ SFU Blueprint</li>
-        <li>Software Engineering Intern @ Wheel For Oneness</li>
-      </ul>
-      
-    ),
-  },
+  }
 ];
 
 const AboutSection = () => {
@@ -85,13 +74,6 @@ const AboutSection = () => {
             >
               {" "}
               Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("experience")}
-              active={tab === "experience"}
-            >
-              {" "}
-              Experience{" "}
             </TabButton>
           </div>
           <div className="mt-8">

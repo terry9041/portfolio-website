@@ -8,61 +8,54 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
+    company: "",
     description: "Project 1 description",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Project"],
+    Url: "/"
   },
   {
     id: 2,
     title: "Potography Portfolio Website",
+    company: "",
     description: "Project 2 description",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Project"],
+    Url: "/"
   },
   {
     id: 3,
     title: "E-commerce Application",
+    company: "",
     description: "Project 3 description",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Project"],
+    Url: "/"
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Software Developer",
+    company: "SFU Blueprint",
+    description: "Built responsive web apps with React and Next.js for SFU Blueprint and Our Community Bikes, enhancing usability for 1,500+ users and streamlining workflows for 500+ volunteers.",
+    image: "/images/projects/Blueprint2.png",
+    tag: ["All", "Experience"],
+    Url: "https://www.linkedin.com/company/sfu-blueprint/posts/?feedView=all"
+
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Software Engineering Intern",
+    description: "Designed and implemented a custom web-based ticketing system with Google Scripts and Python, optimizing logistics for 500 attendees and improving operational efficiency by 30%",
+    company: "Wheel For Oneness",
+    image: "/images/projects/wheel-for-oneness.jpg",
+    tag: ["All", "Experience"],
+    Url: "https://www.linkedin.com/in/wheel-for-oneness-%E6%A5%B5%E5%9C%B0%E5%90%8C%E8%A1%8C-8a15b3295/?originalSubdomain=hk"
+
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Experience");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -80,25 +73,20 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section id="Technial Experience">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+      Technial Experience
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
+          name="Experience"
+          isSelected={tag === "Experience"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Project"
+          isSelected={tag === "Project"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -113,10 +101,10 @@ const ProjectsSection = () => {
             <ProjectCard
               key={project.id}
               title={project.title}
+              company = {project.company}
               description={project.description}
               imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
+              Url={project.Url}
             />
           </motion.li>
         ))}
