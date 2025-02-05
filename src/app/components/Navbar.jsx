@@ -24,8 +24,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-50 bg-[#23242b] bg-opacity-100">
-      <div className="flex-row flex items-center container flex-wrap justify-between mx-auto px-4 py-2">
+    <nav className="fixed w-full top-0 left-0 right-0 z-50 bg-[#23242b] bg-opacity-100 mx-auto">
+      <div className="flex-row flex items-center container flex-wrap justify-between py-2 max-w-[80%] mx-auto">
         <div className = "w-[32px] h-[32px] justify-self-start ">
           <Link
             href={"/"}

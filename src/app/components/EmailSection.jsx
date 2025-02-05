@@ -42,7 +42,7 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="max-w-[80%] mx-auto w-full grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
@@ -118,7 +118,7 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
-              className="text-sm bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="text-sm bg-[#6a98f0] hover:bg-[#4961dc] text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>
