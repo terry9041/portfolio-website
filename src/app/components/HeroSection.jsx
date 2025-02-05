@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-16 px-32">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -15,8 +15,8 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-2xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">
+          <h1 className="text-white mb-4 text-xl sm:text-2xl lg:text-3xl lg:leading-normal font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#6a98f0] to-[#4961dc]">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
@@ -42,14 +42,15 @@ const HeroSection = () => {
             >
               Hire Me
             </Link> */}
-            <Link
-              href="https://drive.google.com/file/d/1m5Xu9svoHiObfCpHQGOtpiSvCLhwHe-u/view?usp=sharing"
-              className="px-4 py-2 inline-block w-full sm:w-auto rounded-lg bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 mt-3"
+            <a
+              href="https://drive.google.com/file/d/1UCoDisRUjHeczfZC2YVmOwxB9nVc0rsh/view?usp=drive_link"
+              target="_blank"
+              className="px-4 py-3 inline-block w-full sm:w-auto rounded-lg bg-gradient-to-tr from-[#6a98f0] to-[#4961dc] text-white font-semibold shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 mt-3"
             >
-              <span className="block bg-transparent rounded-lg px-5 py-2">
-                My Resume
+              <span className="block bg-transparent rounded-lg px-2/3 py-2/3 text-xs font-light">
+                Download Resume
               </span>
-            </Link>
+            </a>
           </div>
         </motion.div>
         {/* <motion.div

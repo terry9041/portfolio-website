@@ -24,14 +24,21 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex-row container lg:py-4 flex-wrap justify-items-end mx-auto px-4 py-2">
-        {/* <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          LOGO
-        </Link> */}
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-50 bg-[#23242b] bg-opacity-100">
+      <div className="flex-row flex items-center container flex-wrap justify-between mx-auto px-4 py-2">
+        <div className = "w-[32px] h-[32px] justify-self-start ">
+          <Link
+            href={"/"}
+            className="text-2xl md:text-5xl text-white font-semibold"
+          >
+            <img 
+          src="/favicon.ico" 
+          alt="Logo"
+          width={32}
+          height={32}
+        />
+          </Link>
+        </div>
         <div className="mobile-menu block md:hidden ">
           {!navbarOpen ? (
             <button
@@ -53,7 +60,7 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <NavLink href={link.path} title={link.title} className = " text-xs" />
               </li>
             ))}
           </ul>

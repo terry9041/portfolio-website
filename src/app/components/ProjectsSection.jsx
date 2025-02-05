@@ -37,7 +37,7 @@ const projectsData = [
     title: "Software Developer",
     company: "SFU Blueprint",
     description: "Built responsive web apps with React and Next.js for SFU Blueprint and Our Community Bikes, enhancing usability for 1,500+ users and streamlining workflows for 500+ volunteers.",
-    image: "/images/projects/Blueprint2.png",
+    image: "/images/projects/sfu-blueprint.png",
     tag: ["All", "Experience"],
     Url: "https://www.linkedin.com/company/sfu-blueprint/posts/?feedView=all"
 
@@ -73,11 +73,11 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="Technial Experience">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-      Technial Experience
+    <section id="projects">
+      <h2 className="px-8 text-center text-2xl font-bold text-white mt-8 mb-[3px] md:mb-4">
+      Technical Experience
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-white flex flex-row justify-center items-center gap-2 pb-6">
         <ProjectTag
           onClick={handleTagChange}
           name="Experience"
@@ -89,7 +89,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Project"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 px-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
