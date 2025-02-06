@@ -1,5 +1,5 @@
-"use client"
-import { useEffect } from "react";
+
+
 import { Suspense } from "react";
 import "./globals.css"; // or your global CSS
 import Loading from "./components/Loading";
@@ -13,9 +13,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    document.body.classList.add('zoom');
-  }, []);
+
 
   return (
     <html lang="en">
