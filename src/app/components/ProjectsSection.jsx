@@ -36,7 +36,7 @@ const projectsData = [
     id: 1,
     title: "Software Developer",
     company: "SFU Blueprint",
-    description: "Developed a volunteer management web app using React, Next.js, and PostgreSQL for Our Community Bikes, reducing administrative hours by 83% and supporting real-time data synchronization for 500+ users.",
+    description: "Engineered a volunteer management web app using React, Next.js, and PostgreSQL for Our Community Bikes.",
     image: "/images/projects/sfu-blueprint.png",
     tag: ["All", "Experience"],
     Url: "https://www.linkedin.com/company/sfu-blueprint/posts/?feedView=all"
@@ -45,7 +45,7 @@ const projectsData = [
   {
     id: 2,
     title: "Software Engineering Intern",
-    description: "Designed and implemented a custom web-based ticketing system with Google Scripts and Python, optimizing logistics for 500 attendees and improving operational efficiency by 30%",
+    description: "Designed and implemented custom Python ticketing system and member data pipeline",
     company: "Wheel For Oneness",
     image: "/images/projects/wheel-for-oneness.jpg",
     tag: ["All", "Experience"],
@@ -109,7 +109,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Project"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 px-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 ">
         {filteredProjects.map((project, index) => (
           
             <ProjectCard

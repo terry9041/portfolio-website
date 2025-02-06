@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212] items-center w-full">
       <Navbar />
-      <div className="container mt-24 mx-auto lg-mx-8  py-4">
+      <div className="container mt-24 mx-auto w-min-[80%] w-max-[1200px] py-4 flex flex-col items-center">
         <HeroSection />
         
         <AboutSection />

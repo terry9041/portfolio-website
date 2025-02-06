@@ -1,6 +1,5 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import Image from "next/image";
 import TabButton from "./TabButton";
 
 const TAB_DATA = [
@@ -12,6 +11,7 @@ const TAB_DATA = [
         <li>Next.js</li>
         <li>React</li>
         <li>Jest</li>
+        <li>Python</li>
         <li>Spring Boot</li>
         <li>Hibernate</li>
         <li>JUnit</li>
@@ -49,35 +49,31 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white px-32" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+    <section className="lg:py-16 px-8 lg:px-40">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-8">
+        <div className="col-span-8">
           <h2 className="text-2xl font-bold text-white mb-4">About Me</h2>
-          <div className="space-y-4 text-base lg:text-sm leading-relaxed">
-          <p>
-  I am a driven and aspiring software developer with a passion for transforming innovative ideas into user-friendly software solutions. Currently serving as a Software Developer at SFU Blueprint, I excel at working collaboratively within a team. I thrive on tackling complex challenges, expanding my skill set, and fostering meaningful connections.
-</p>
-  
-  
-</div>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
+          <div className="space-y-4 text-base md:text-sm leading-relaxed">
+            <p>
+              I am a driven and aspiring software developer with a passion for transforming innovative ideas into user-friendly software solutions. Currently serving as a Software Developer at SFU Blueprint, I excel at working collaboratively within a team. I thrive on tackling complex challenges, expanding my skill set, and fostering meaningful connections.
+            </p>
+            <p>
+              When I&apos;m not writing code, you might find me in the kitchen trying out new recipes — it’s a bit like solving a tricky bug. And when it’s time to relax, I enjoy some smooth jazz with its unexpected rhythms, much like the surprises in programming 🎷🎶
+            </p>
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+          <div className="flex flex-row justify-start mt-8">
+            {TAB_DATA.map((tabData) => (
+              <TabButton
+                key={tabData.id}
+                selectTab={() => handleTabChange(tabData.id)}
+                active={tab === tabData.id}
+              >
+                {tabData.title}
+              </TabButton>
+            ))}
+          </div>
+          <div className="mt-4">
+            {TAB_DATA.find((tabData) => tabData.id === tab)?.content}
           </div>
         </div>
       </div>
