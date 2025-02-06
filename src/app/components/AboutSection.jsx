@@ -9,12 +9,14 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2 text-xs">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
+        <li>Next.js</li>
         <li>React</li>
+        <li>Jest</li>
+        <li>Spring Boot</li>
+        <li>Hibernate</li>
+        <li>JUnit</li>
+        <li>Git</li>
+        <li>Linux</li>
       </ul>
     ),
   },
@@ -25,7 +27,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>
           Simon Fraser University
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 text-xs">
             <li>Bachelor of Science in Computing Science</li>
             <li>GPA: 3.89/4.33</li>
             <li>Awards: SFU Alumni Scholarship (Summer 2024)</li>
@@ -33,7 +35,7 @@ const TAB_DATA = [
         </li>
       </ul>
     ),
-  }
+  },
 ];
 
 const AboutSection = () => {
@@ -49,17 +51,16 @@ const AboutSection = () => {
   return (
     <section className="text-white px-32" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-2xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-xs">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Java, Spring boot,
-            HTML, CSS, and Git. I am a quick learner and I am always looking to
-            expand my knowledge and skill set. I am a team player and I am
-            excited to work with others to create amazing applications.
-          </p>
+          <div className="space-y-4 text-base lg:text-sm leading-relaxed">
+          <p>
+  I&apos;m a full-stack developer based in Vancouver with a passion for building clean and intuitive web experiences. For my past year, I have delved into learning different areas of CS, from programming paradigms to deployment practices. And now I&apos;m exploring different web architectures and experimenting with computer graphics 🚀
+</p>
+<p> When I am not coding, you can find me playing a round of pool 🎱 - this is a game that requires focus and patience, much like solving a difficult bug. And when I get curved, I enjoy the smooth rhythm of Jazz, with its unexpected turn, like a surprise in programming 🎷🎶 </p>
+  
+  
+</div>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}

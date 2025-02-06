@@ -3,72 +3,84 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import GithubIcon from "../../../public/github-icon.svg";
+import LinkedinIcon from "../../../public/linkedin-icon.svg";
+
+const Scene = dynamic(() => import("./Scene"), {
+  ssr: false,
+});
 
 const HeroSection = () => {
   return (
     <section className="lg:py-16 px-32">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
-          <h1 className="text-white mb-4 text-xl sm:text-2xl lg:text-3xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#6a98f0] to-[#4961dc]">
-              Hello, I&apos;m{" "}
-            </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                "Terry",
-                1000,
-                "a Web Developer",
-                1000,
-                "a Tech Enthusiast",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
-
-          <div>
-            {/* <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
-            >
-              Hire Me
-            </Link> */}
-            <a
-              href="https://drive.google.com/file/d/1UCoDisRUjHeczfZC2YVmOwxB9nVc0rsh/view?usp=drive_link"
-              target="_blank"
-              className="px-4 py-3 inline-block w-full sm:w-auto rounded-lg bg-gradient-to-tr from-[#6a98f0] to-[#4961dc] text-white font-semibold shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 mt-3"
-            >
-              <span className="block bg-transparent rounded-lg px-2/3 py-2/3 text-xs font-light">
-                Download Resume
+        <div className="col-span-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className=" text-center sm:text-left md:pl-8"
+          >
+            <h1 className="text-white mb-4 text-xl sm:text-2xl lg:text-3xl lg:leading-normal font-extrabold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-tr to-[#6a98f0] from-[#b19cd9]">
+                Hello, I&apos;m{" "}
               </span>
-            </a>
+              <br></br>
+              <TypeAnimation
+                sequence={[
+                  "Terry 👋",
+                  1000,
+                  "a Web Developer",
+                  1000,
+                  "a Tech Enthusiast",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
+            <div>
+              <a
+                href="https://drive.google.com/file/d/1UCoDisRUjHeczfZC2YVmOwxB9nVc0rsh/view?usp=drive_link"
+                target="_blank"
+                className="px-4 py-3 inline-block w-full sm:w-auto rounded-lg bg-gradient-to-tr to-[#6a98f0] from-[#b19cd9] text-white font-semibold shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 mt-3"
+              >
+                <span className="block bg-transparent rounded-lg px-3/5 py-3/5 text-xs">
+                  Download Resume
+                </span>
+              </a>
+            </div>
+          </motion.div>
+          <div className="flex flex-row pl-8 pt-4">
+            <Link href="https://github.com/terry9041">
+              <Image
+                src={GithubIcon}
+                alt="Github Icon"
+                width={32}
+                height={32}
+                className="fill-current text-[#6a98f0]"
+              />
+            </Link>
+            <Link href="https://www.linkedin.com/in/sfu-terry/">
+              <Image
+                src={LinkedinIcon}
+                alt="Linkedin Icon"
+                width={32}
+                height={32}
+                className="fill-current text-[#6a98f0]"
+              />
+            </Link>
           </div>
-        </motion.div>
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/hero-image.png"
-              alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
-          </div>
-        </motion.div> */}
+        </div>
+        <div className="sm:col-span-4">
+          <Suspense fallback={<p>Loading Scene...</p>}>
+            <Scene />
+          </Suspense>
+        </div>
       </div>
     </section>
   );

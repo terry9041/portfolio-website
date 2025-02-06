@@ -13,11 +13,12 @@ const ProjectCard = ({ imgUrl, title, company, description, Url }) => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
         }}
-        onclick="window.open(`${gitUrl}`)"
+        onClick={() => window.open(Url, "_blank")}
       >
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#23242b] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
           <Link
             href={Url}
+            target="_blank"
             className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
           >
             <svg
