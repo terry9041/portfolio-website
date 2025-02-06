@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} scale-88`}>
+      <body className={`${inter.className} scale-90`}>
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </body>
     </html>
