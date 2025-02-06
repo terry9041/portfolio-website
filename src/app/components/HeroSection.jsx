@@ -18,12 +18,12 @@ const HeroSection = () => {
     <section className="lg:py-16 px-32">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-8">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             className=" text-center sm:text-left md:pl-8"
-          >
+          > */}
             <h1 className="text-white mb-4 text-xl sm:text-2xl lg:text-3xl lg:leading-normal font-extrabold">
               <span className="text-transparent bg-clip-text bg-gradient-to-tr to-[#6a98f0] from-[#b19cd9]">
                 Hello, I&apos;m{" "}
@@ -31,7 +31,7 @@ const HeroSection = () => {
               <br></br>
               <TypeAnimation
                 sequence={[
-                  "Terry 👋",
+                  "Terry Kwok 👋",
                   1000,
                   "a Web Developer",
                   1000,
@@ -54,8 +54,7 @@ const HeroSection = () => {
                 </span>
               </a>
             </div>
-          </motion.div>
-          <div className="flex flex-row pl-8 pt-4">
+            <div className="flex flex-row pt-4 gap-2">
             <Link href="https://github.com/terry9041">
               <Image
                 src={GithubIcon}
@@ -75,6 +74,8 @@ const HeroSection = () => {
               />
             </Link>
           </div>
+          {/* </motion.div> */}
+          
         </div>
         <div className="sm:col-span-4">
           <Suspense fallback={<p>Loading Scene...</p>}>

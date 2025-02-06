@@ -216,33 +216,31 @@ function Sphere({ edgeColor = "gold", radius = 1, widthSegments = 12, heightSegm
   );
 }
 
-export default function Scene() {
+export default function Scene({ multiplier = 1.3 }) {
   return (
     <div className="w-full h-[200px]">
-      <Canvas camera={{ position: [6, 6, 6], fov: 45 }}>
+      <Canvas camera={{ position: [6 * multiplier, 6 * multiplier, 6 * multiplier], fov: 45 }}>
         <ambientLight intensity={0.2} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        <pointLight position={[10 * multiplier, 10 * multiplier, 10 * multiplier]} intensity={1} />
+        <pointLight position={[-10 * multiplier, -10 * multiplier, -10 * multiplier]} intensity={0.5} />
         <Float speed={1.3} rotationIntensity={0}>
           {/* Pyramid with Neon Pink */}
-          {/* Change scale prop for overall size,
-              adjust position array for spacing */}
           <Pyramid
             edgeColor="#FF6EC7"
-            scale={0.8} // Increase to make pyramid larger, decrease to make smaller.
-            position={[-2, 2, 0]} // Adjust x, y, z to control spacing.
+            scale={0.8 * multiplier} // Adjust scale using multiplier
+            position={[-2 * multiplier, 2 * multiplier, 0]} // Adjust position using multiplier
           />
           {/* Cube with Neon Blue */}
           <Cube
             edgeColor="#08F7FE"
-            size={1.5} // Modify the size prop to control cube size.
-            position={[0, 0, 0]} // Change position for spacing.
+            size={1.5 * multiplier} // Adjust size using multiplier
+            position={[0, 0, 0]} // Adjust position using multiplier
           />
           {/* Sphere with Neon Green */}
           <Sphere
             edgeColor="#39FF14"
-            radius={1} // Adjust radius to control sphere size.
-            position={[2, 1, 0]} // Adjust position to control spacing.
+            radius={1 * multiplier} // Adjust radius using multiplier
+            position={[2 * multiplier, 1 * multiplier, -0.7* multiplier]} // Adjust position using multiplier
           />
         </Float>
         <OrbitControls enableZoom={false} autoRotate={true} />

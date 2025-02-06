@@ -55,9 +55,8 @@ const AboutSection = () => {
           <h2 className="text-2xl font-bold text-white mb-4">About Me</h2>
           <div className="space-y-4 text-base lg:text-sm leading-relaxed">
           <p>
-  I&apos;m a full-stack developer based in Vancouver with a passion for building clean and intuitive web experiences. For my past year, I have delved into learning different areas of CS, from programming paradigms to deployment practices. And now I&apos;m exploring different web architectures and experimenting with computer graphics 🚀
+  I am a driven and aspiring software developer with a passion for transforming innovative ideas into user-friendly software solutions. Currently serving as a Software Developer at SFU Blueprint, I excel at working collaboratively within a team. I thrive on tackling complex challenges, expanding my skill set, and fostering meaningful connections.
 </p>
-<p> When I am not coding, you can find me playing a round of pool 🎱 - this is a game that requires focus and patience, much like solving a difficult bug. And when I get curved, I enjoy the smooth rhythm of Jazz, with its unexpected turn, like a surprise in programming 🎷🎶 </p>
   
   
 </div>

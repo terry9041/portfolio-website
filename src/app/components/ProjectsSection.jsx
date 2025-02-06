@@ -6,50 +6,70 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 1,
+    id: 7,
     title: "React Portfolio Website",
     company: "",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Project"],
-    Url: "/"
-  },
-  {
-    id: 2,
-    title: "Potography Portfolio Website",
-    company: "",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    description: "Leveraged Next.js, Three.js to create a visually appealing and interactive portfolio website, showcasing projects and experiences.",
+    image: "/images/projects/website.png",
     tag: ["All", "Project"],
     Url: "/"
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    company: "",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "FabricFlow",
+    company: "Client Project with FABCYCLE",
+    description: "An all-in-one fabric management system that helps hobbyists and small businesses manage their fabric inventory, track projects. ",
+    image: "/images/projects/fabricflow.png",
     tag: ["All", "Project"],
-    Url: "/"
+    Url: "https://github.com/terry9041/FabricFlow"
   },
   {
     id: 4,
+    title: "SmartExpense",
+    company: "Best Beginner Award, Stormhack V2",
+    description: "AI-powered expense tracking app that uses OCR to scan receipts and automatically categorize expenses",
+    image: "/images/projects/smartexpense2.png",
+    tag: ["All", "Project"],
+    Url: "https://github.com/qvd808/stormhack-v2-2024"
+  },
+  {
+    id: 1,
     title: "Software Developer",
     company: "SFU Blueprint",
-    description: "Built responsive web apps with React and Next.js for SFU Blueprint and Our Community Bikes, enhancing usability for 1,500+ users and streamlining workflows for 500+ volunteers.",
+    description: "Developed a volunteer management web app using React, Next.js, and PostgreSQL for Our Community Bikes, reducing administrative hours by 83% and supporting real-time data synchronization for 500+ users.",
     image: "/images/projects/sfu-blueprint.png",
     tag: ["All", "Experience"],
     Url: "https://www.linkedin.com/company/sfu-blueprint/posts/?feedView=all"
 
   },
   {
-    id: 5,
+    id: 2,
     title: "Software Engineering Intern",
     description: "Designed and implemented a custom web-based ticketing system with Google Scripts and Python, optimizing logistics for 500 attendees and improving operational efficiency by 30%",
     company: "Wheel For Oneness",
     image: "/images/projects/wheel-for-oneness.jpg",
     tag: ["All", "Experience"],
     Url: "https://www.linkedin.com/in/wheel-for-oneness-%E6%A5%B5%E5%9C%B0%E5%90%8C%E8%A1%8C-8a15b3295/?originalSubdomain=hk"
+
+  },
+  {
+    id: 6,
+    title: "Custom Shell",
+    description: "Custom shell with built-in commands and features such as piping, redirection, and background processes",
+    company: "",
+    image: "/images/projects/myshell.png",
+    tag: ["All", "Project"],
+    Url: "https://github.com/terry9041/my-shell"
+
+  },
+  {
+    id: 5,
+    title: "ImageFX",
+    description: "A sleek Python-based Lightroom clone using tkinter. Effortlessly apply over 10 stunning image transformations, from grayscale and auto-level adjustments to sepia tone, edge detection, and an adjustable glitch effect.",
+    company: "",
+    image: "/images/projects/pyps.png",
+    tag: ["All", "Project"],
+    Url: "https://github.com/terry9041/my-shell"
 
   },
 ];
@@ -63,9 +83,9 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  const filteredProjects = projectsData
+    .filter((project) => project.tag.includes(tag))
+    .sort((a, b) => a.id - b.id);
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -91,13 +111,7 @@ const ProjectsSection = () => {
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 px-12">
         {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
+          
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -106,7 +120,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               Url={project.Url}
             />
-          </motion.li>
+          
         ))}
       </ul>
     </section>
