@@ -41,7 +41,7 @@ const ProjectCard = ({ imgUrl, title, company, description, Url }) => {
       </div>
       <div className="text-white rounded-b-xl  bg-[#23242b] py-5 px-4 flex h-50 flex-col items-center">
         <h5 className="text-base font-semibold mb-2 text-center">{title}</h5>
-        <h6 class="text-sm font-medium mb-1">{company}</h6>
+        <h6 class="text-sm font-medium mb-1 text-center">{company}</h6>
         <p class="text-[#ADB7BE] mt-1 text-xs">{description}</p>
       </div>
     </div>
