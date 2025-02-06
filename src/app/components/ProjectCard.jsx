@@ -27,7 +27,7 @@ const ProjectCard = ({ imgUrl, title, company, description, Url }) => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              ariaHidden="true"
+              aria-hidden="true"
               className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white"
             >
               <path
@@ -41,8 +41,8 @@ const ProjectCard = ({ imgUrl, title, company, description, Url }) => {
       </div>
       <div className="text-white rounded-b-xl  bg-[#23242b] py-5 px-4 flex h-50 flex-col items-center">
         <h5 className="text-base font-semibold mb-2 text-center">{title}</h5>
-        <h6 class="text-sm font-medium mb-1 text-center">{company}</h6>
-        <p class="text-[#ADB7BE] mt-1 text-xs">{description}</p>
+        <h6 className="text-sm font-medium mb-1 text-center">{company}</h6>
+        <p className="text-[#ADB7BE] mt-1 text-xs">{description}</p>
       </div>
     </div>
   );

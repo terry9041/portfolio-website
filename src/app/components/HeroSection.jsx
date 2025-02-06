@@ -14,7 +14,7 @@ const Scene = dynamic(() => import("./Scene"), {
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16 md:py-12 md:mb-4 px-8">
+    <section className="lg:py-16 md:pt-8 md:pb-12 px-8">
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 h-full">
         <div className="col-span-7 flex flex-col justify-center">
           <motion.div
@@ -87,7 +87,7 @@ const HeroSection = () => {
           </div>
           </motion.div>
         </div>
-        <div className="col-span-5 flex items-center justify-center">
+        <div className="col-span-5 flex items-center justify-center z-10 relative ">
           <Suspense fallback={<p>Loading Scene...</p>}>
             <Scene />
           </Suspense>

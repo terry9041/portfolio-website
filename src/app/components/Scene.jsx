@@ -216,9 +216,9 @@ function Sphere({ edgeColor = "gold", radius = 1, widthSegments = 12, heightSegm
   );
 }
 
-export default function Scene({ multiplier = 1.3 }) {
+export default function Scene({ multiplier = 1.5 }) {
   return (
-    <div className="w-full h-[200px]">
+    <div className="w-full h-[300px] z-10 relative">
       <Canvas camera={{ position: [6 * multiplier, 6 * multiplier, 6 * multiplier], fov: 45 }}>
         <ambientLight intensity={0.2} />
         <pointLight position={[10 * multiplier, 10 * multiplier, 10 * multiplier]} intensity={1} />

@@ -57,9 +57,6 @@ const AboutSection = () => {
             <p>
               I am a driven and aspiring software developer with a passion for transforming innovative ideas into user-friendly software solutions. Currently serving as a Software Developer at SFU Blueprint, I excel at working collaboratively within a team. I thrive on tackling complex challenges, expanding my skill set, and fostering meaningful connections.
             </p>
-            <p>
-              When I&apos;m not writing code, you might find me in the kitchen trying out new recipes — it’s a bit like solving a tricky bug. And when it’s time to relax, I enjoy some smooth jazz with its unexpected rhythms, much like the surprises in programming 🎷🎶
-            </p>
           </div>
           <div className="flex flex-row justify-start mt-8">
             {TAB_DATA.map((tabData) => (

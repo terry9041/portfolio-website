@@ -9,22 +9,22 @@ const projectsData = [
     id: 7,
     title: "React Portfolio Website",
     company: "",
-    description: "Leveraged Next.js, Three.js to create a visually appealing and interactive portfolio website, showcasing projects and experiences.",
+    description: "Visually appealing and interactive portfolio website built with Next.js and Three.js, showcasing projects and experiences.",
     image: "/images/projects/website.png",
     tag: ["All", "Project"],
     Url: "/"
   },
   {
-    id: 3,
+    id: 4,
     title: "FabricFlow",
     company: "Client Project with FABCYCLE",
-    description: "An all-in-one fabric management system that helps hobbyists and small businesses manage their fabric inventory, track projects. ",
+    description: "All-in-one fabric management system that helps hobbyists and small businesses manage their fabric inventory, track projects. ",
     image: "/images/projects/fabricflow.png",
     tag: ["All", "Project"],
     Url: "https://github.com/terry9041/FabricFlow"
   },
   {
-    id: 4,
+    id: 3,
     title: "SmartExpense",
     company: "Best Beginner Award, Stormhack V2",
     description: "AI-powered expense tracking app that uses OCR to scan receipts and automatically categorize expenses",
@@ -65,7 +65,7 @@ const projectsData = [
   {
     id: 5,
     title: "ImageFX",
-    description: "A sleek Python-based Lightroom clone using tkinter. Effortlessly apply over 10 stunning image transformations, from grayscale and auto-level adjustments to sepia tone, edge detection, and an adjustable glitch effect.",
+    description: "Sleek Python-based Lightroom clone using tkinter with over 10 stunning image transformations, from grayscale and auto-level adjustments to sepia tone, edge detection, and an adjustable glitch effect.",
     company: "",
     image: "/images/projects/pyps.png",
     tag: ["All", "Project"],
