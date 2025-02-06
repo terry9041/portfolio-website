@@ -15,13 +15,9 @@ const Scene = dynamic(() => import("./Scene"), {
 const HeroSection = () => {
   return (
     <section className="lg:py-16 md:pt-8 md:pb-12 px-8">
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 h-full">
+      <div className="grid grid-cols-1 items-stretch sm:grid-cols-12 gap-8 h-full">
         <div className="col-span-7 flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-center sm:text-left"
+          <div
           >
             <h1 className="text-white  text-xl sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold">
               <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#6a98f0] to-[#b19cd9]">
@@ -85,12 +81,12 @@ const HeroSection = () => {
               />
             </Link>
           </div>
-          </motion.div>
+          </div>
         </div>
         <div className="col-span-5 flex items-center justify-center z-10 relative ">
-          <Suspense fallback={<p>Loading Scene...</p>}>
+          <div className = "w-[300px] h-[300px]">
             <Scene />
-          </Suspense>
+          </div>
         </div>
       </div>
     </section>
